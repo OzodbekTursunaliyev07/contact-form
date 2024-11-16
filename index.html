@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact Us</title>
+
+    <!-- Fav Icon -->
+    <link rel="icon" type="image/png" href="/favicon-96x96.png" sizes="96x96" />
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+    <link rel="shortcut icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+
+    <!-- styles -->
+    <link rel="stylesheet" href="./css/style.css" />
+  </head>
+  <body>
+    <div class="loader">
+      <div class="ring"></div>
+    </div>
+
+    <form class="contact__form">
+      <h1 class="form__title">Contact Us</h1>
+      <div class="form__inputs">
+        <div class="inputs__name">
+          <label>
+            <span>First Name *</span>
+            <input type="text" required />
+          </label>
+          <label>
+            <span>Last Name *</span>
+            <input type="text" required />
+          </label>
+        </div>
+        <label class="form__email">
+          <span>Email Address * </span>
+          <input type="email" required />
+        </label>
+        <div class="query__type">
+          <span>Query Type *</span>
+          <label>
+            <input type="radio" name="query__type" required />
+            <span>General Enquiry </span>
+          </label>
+          <label>
+            <input type="radio" name="query__type" required />
+            <span>Support Request </span>
+          </label>
+        </div>
+        <label class="form__textarea">
+          <span>Message *</span>
+          <textarea id="" required></textarea>
+        </label>
+      </div>
+      <label class="form__chekbox">
+        <input type="checkbox" required />
+        <span>I consent to being contacted by the team *</span>
+      </label>
+      <button class="contact__btn">Submit</button>
+    </form>
+
+    <script>
+      const loaders = document.getElementsByClassName("loader");
+
+      setTimeout(() => {
+        for (let i = 0; i < loaders.length; i++) {
+          loaders[i].style.display = "none";
+          loaders[i].style.opacity = "0";
+        }
+      }, 3000);
+    </script>
+  </body>
+</html>
